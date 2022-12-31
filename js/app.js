@@ -53,7 +53,6 @@ const countdown = () => {
     } else if(now.getFullYear() == '2023'){
         console.log('2023');
         control_function()
-        window.location.reload();
     }
 }
 
