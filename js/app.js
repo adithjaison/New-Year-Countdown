@@ -21,10 +21,10 @@ const fireworks = new Fireworks(fireworkContainer, {
 })
 
 const control_function = () => {
-    fireworks.start()
-    newYear.innerHTML = new Date().getFullYear()
     document.querySelector('.header').style.visibility = 'visible';
     document.querySelector('.timer').style.display = "none";
+    fireworks.start()
+    newYear.innerHTML = new Date().getFullYear()
     clearInterval(countdownInterval)
 }
 
