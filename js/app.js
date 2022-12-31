@@ -59,3 +59,4 @@ const countdown = () => {
 countdown()
 
 const countdownInterval = setInterval(countdown, 1000)
+window.location.reload();
