@@ -7,7 +7,6 @@ const newYear = document.querySelector('#new-year')
 
 const now = new Date()
 newYear.innerHTML = now.getFullYear()
-
 const countToDate = new Date(now.getFullYear() + 1, 0, 1).getTime()
 
 const fireworks = new Fireworks(fireworkContainer, {
@@ -24,6 +23,7 @@ const control_function = () => {
     document.querySelector('.timer').style.display = "none";
     fireworks.start()
     newYear.innerHTML = new Date().getFullYear()
+
     clearInterval(countdownInterval)
 }
 
@@ -32,9 +32,7 @@ const countdown = () => {
         document.querySelector('.header').style.display = "none";
         console.log('2022');
         const now = new Date().getTime()
-
         const distance = countToDate - now
-
         const days = Math.floor(distance / (1000 * 60 * 60 * 24))
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
@@ -56,12 +54,5 @@ const countdown = () => {
 }
 
 countdown()
-
+window.location.reload();
 const countdownInterval = setInterval(countdown, 1000)
-
-window.onload = function() {
-    if(!window.location.hash) {
-        window.location = window.location + '#loaded';
-        window.location.reload();
-    }
-}
