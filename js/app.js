@@ -25,6 +25,7 @@ const control_function = () => {
     document.querySelector('.timer').style.display = "none";
     fireworks.start()
     newYear.innerHTML = new Date().getFullYear()
+    location.reload();
     clearInterval(countdownInterval)
 }
 
@@ -59,4 +60,3 @@ const countdown = () => {
 countdown()
 
 const countdownInterval = setInterval(countdown, 1000)
-window.location.reload();
