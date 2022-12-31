@@ -25,7 +25,6 @@ const control_function = () => {
     newYear.innerHTML = new Date().getFullYear()
     document.querySelector('.header').style.visibility = 'visible';
     document.querySelector('.timer').style.display = "none";
-    window.location.reload();
     clearInterval(countdownInterval)
 }
 
@@ -54,6 +53,7 @@ const countdown = () => {
     } else if(now.getFullYear() == '2023'){
         console.log('2023');
         control_function()
+        window.location.reload();
     }
 }
 
