@@ -6,7 +6,7 @@ const secondsSpan = document.querySelector('#seconds')
 const newYear = document.querySelector('#new-year')
 
 const now = new Date()
-
+window.location.reload();
 newYear.innerHTML = now.getFullYear()
 
 const countToDate = new Date(now.getFullYear() + 1, 0, 1).getTime()
@@ -53,7 +53,6 @@ const countdown = () => {
     } else if(now.getFullYear() == '2023'){
         console.log('2023');
         control_function()
-        window.location.reload();
     }
 }
 
